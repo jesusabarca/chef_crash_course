@@ -22,6 +22,6 @@ describe package('tree') do
 end
 
 describe file('/etc/motd') do
-  it { should exists }
-  its('content') { should be 'Sup!' }
+  it { should exist }
+  its('content') { should match 'Sup\!' }
 end
