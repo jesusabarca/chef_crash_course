@@ -1,6 +1,4 @@
-package 'httpd' do
-  action :install
-end
+package 'httpd'
 
 file '/var/www/html/index.html' do
   content '<h1>Hello, world!</h1>'
