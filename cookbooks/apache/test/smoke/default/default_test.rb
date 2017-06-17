@@ -18,6 +18,6 @@ end
 describe file('/var/www/html/index.html') do
   it { should exist }
   its('content') { should match '<h1>Hello, world!</h1>' }
-  its('content') { should match %r[IP\saddress:\s\d{3}\.\d{3}\.\d{3}\.\d{3}] }
-  its('content') { should match %r[Hostname:\s(\d|\w)] }
+  its('content') { should match %r[IP\saddress:\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}] }
+  its('content') { should match %r[Hostname:\s(\d|\w)+] }
 end
