@@ -20,3 +20,8 @@
 describe package('tree') do
   it { should be_installed }
 end
+
+describe file('/etc/motd') do
+  it { should exists }
+  its('content') { should be 'Sup!' }
+end
