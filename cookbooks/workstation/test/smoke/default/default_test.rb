@@ -24,8 +24,8 @@ end
 describe file('/etc/motd') do
   it { should exist }
   its('content') { should match 'Property of ...' }
-  its('content') { should match %r[IPADDRESS:\s*\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}] }
-  its('content') { should match %r[HOSTNAME:\s*(\d|\w)+] }
-  its('content') { should match %r[MEMORY:\s*\d+kB] }
-  its('content') { should match %r[CPU:\s*\d+\.\d+] }
+  its('content') { should match %r[IPADDRESS:\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}] }
+  its('content') { should match %r[HOSTNAME\s*:\s(\d|\w)+] }
+  its('content') { should match %r[MEMORY\s*:\s\d+kB] }
+  its('content') { should match %r[CPU\s*:\s\d+\.\d+] }
 end
