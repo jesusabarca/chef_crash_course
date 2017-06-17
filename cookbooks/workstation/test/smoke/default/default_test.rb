@@ -23,5 +23,5 @@ end
 
 describe file('/etc/motd') do
   it { should exist }
-  its('content') { should match 'Sup\!' }
+  its('content') { should match 'Sup!' }
 end
